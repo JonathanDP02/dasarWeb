@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <form method="POST" action="gambar.html">
+    <form method="GET" action="gambar.html">
         <h4>FORM</h4>
         <input type="text" name="var1" SIZE="30" VALUE="Enter your name here.">
         <BR><BR>
@@ -24,6 +24,22 @@
         <input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
         <input type="checkbox" name="vehicle3" value="Boat"> I have a boat<br>
         <input type="checkbox" name="vehicle4" value="Plane" checked> I have a plane<br>
+        <BR><BR>
+        <br>
+        <b>Where are you from?</b>
+        <br>
+        <select name="var6" size="1">
+            <option value="BG">Bulgaria
+            <option value="Uk">United Kingdom
+            <option value="USA">USA
+            <option value="Indonesia" selected>Indonesia
+        </select>
+        <BR><BR>
+        <input type="text" name="password" size="30" placeholder="Enter your private code.">
+        <br><br>
+        <B>Enter your comment</B>
+        <BR>
+        <textarea name="comment" rows="5" cols="40" placeholder="Fill this area"></textarea>
         <BR><BR>
         <input type="submit" name="var5" value="Send">
         <input type="reset" name="var6" value="Clear">
