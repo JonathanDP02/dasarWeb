@@ -1,0 +1,46 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    line-height: 1.65;
+    padding-bottom: 1000px;
+    background-image: url(bunga2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.container-satu{
+    width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.kolom-utama{
+    flex: 2;
+    order: 2;
+    padding: 20px;
+    background-color: palevioletred;
+}
+
+.sidebar-satu{
+    flex: 1;
+    order: 1;
+    padding: 20px;
+    background-color: blueviolet;
+}
+
+.sidebar-dua{
+    flex: 1;
+    order: 3;
+    padding: 20px;
+    background-color: greenyellow;
+}
