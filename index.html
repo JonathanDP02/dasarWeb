@@ -1,76 +1,42 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Position CSS</title>
-    <link rel="stylesheet" type="text/css" href="stylePosition.css">
-</head>
+    <head>
+        <title>CSS Layouting</title>
+        <style>
+            a {
+                background-color: pink;
+                width: 200px;
+                height: 200px;
+                display: inline-block;
+            }
+            h1, h2, p {
+                background-color: lightgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+        <h1>Selamat Datang Di Website Kami</h1>
+        </div>
 
-<body>
+        <div class="navigasi">
+        <h2>Daftar Link</h2>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+        <a href="#">Link 5</a>
+        </div>
 
-<h2>position: static;</h2>
+        <div class="main">
+        <h2>TEKNIK INFORMATIKA</h2>
+        <img src="logo.jpg">
+        <p>Pada tahun 2010 berdasar kebutuhan masyarakat dan industri terkait Program Diploma IV bidang informatika maka Polinema mendirikan program studi baru Diploma IV (DIV) Teknik Informatika (TI). Pada awal berdirinya jumlah peserta didik Program D-IV TI hanya terdiri dari 46 Mahasiswa, namun pada tahun 2015 jumlah peserta didik Prodi D-IV TI telah mengalami peningkatan menjadi 545 Mahasiswa.</p>
+        <p>Perkembangan jumlah mahasiswa yang sangat pesat baik di Program Studi D-III MI maupun D-IV TI mendorong pimpinan di Polinema untuk menyatukan kedua program studi tersebut dalam satu organisasi jurusan baru terpisah dari jurusan Teknik Elektro. dibawa Jurusan baru terpisah dari Jurusan Teknik Elektro. Dan pada tahun 2015 berdasarkan SK Direktur Nomor 53 dalam rangka peningkatan mutu pengelolaan dan optimasi sumber daya dibentuklah Jurusan Teknologi Informasi (JTI) dengan prodi D-III MI dan D-IV TI.</p>
+        </div>    
 
-<p>Position static digunakan untuk mengatur element menjadi statis secara default. 
-   Elemen akan mengikuti posisi normal secara default,
-   elemen tidak dipengaruhi oleh properti seperti top, bottom, left dan right.</p>
-
-<div class="static">
-    Elemen ini diatur menggunakan posisi: static;
-</div>
-<br><br><br><br>
-
-<h2>position: relative;</h2>
-
-<p>Sebuah element HTML yang menggunakan position relative akan terletak pada posisi normal. 
-   Mengatur properti atas, kanan, bawah, dan kiri dari elemen yang diposisikan dengan “relatif” 
-   akan membuatnya jauh dari posisi normalnya. 
-   Konten lain tidak akan disesuaikan agar sesuai dengan celah yang ditinggalkan oleh elemen tersebut.</p>
-
-<div class="relative">
-    Elemen ini diatur menggunakan posisi : relative;
-</div>
-<br><br><br><br>
-
-<h2>position: fixed;</h2>
-
-<p>Sebuah element HTML yang di setting dengan position fixed akan memiliki sifat tetap, 
-   tidak akan berubah bahkan jika halaman website di scroll. 
-   Berlaku pengaturan left, bottom, top dan right pada position fixed:</p>
-
-<div class="fixed">
-    Elemen ini diatur menggunakan posisi: fixed;
-</div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-<h2>position: absolute;</h2>
-
-<p>Element HTML yang menggunakan position absolute akan diposisikan relatif dengan 
-   element lain yang mendahuluinya yang terdekat, 
-   bukan relatif terhadap layar secara normal.</p>
-
-<div class="relative1">Elemen ini diatur menggunakan posisi: relative;
-    <div class="absolute">Elemen ini diatur menggunakan posisi: absolute;</div>
-</div>
-<br><br><br><br><br><br>
-
-<h2>position: sticky;</h2>
-
-<p>Cobalah untuk <b>scroll</b> untuk mengetahui bagaimana posisi sticky bekerja.</p>
-<p><i>Catatan: IE/Edge 15 dan versi yang lebih lama tidak mendukung sticky.</i></p>
-
-<div class="sticky">Hola Aku adalah sticky!</div>
-
-<div style="padding-bottom:2000px">
-    <p>Dalam contoh ini, elemen sticky menempel pada posisi paling atas halaman (top:0), 
-       ketika mencapai posisi scrollnya.</p>
-    <p>Cobalah untuk melakukan scroll.</p>
-    <p>Cobalah untuk melakukan scroll. Lorem ipsum dolor sit amet, illum definitiones no quo, 
-       maluisset conclusionemque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, 
-       id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur 
-       his ad. Eum no molestiae voluptatibus.</p>
-    <p>Cobalah untuk melakukan scroll. Lorem ipsum dolor sit amet, illum definitiones no quo, 
-       maluisset conclusionemque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, 
-       id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur 
-       his ad. Eum no molestiae voluptatibus.</p>
-</div>
-
-</body>
+        <div class="copyright">
+        <p>Copyright 2020. Desain dan Pemrograman Web JTI Polinema</p>
+        </div>
+    </body>
 </html>
