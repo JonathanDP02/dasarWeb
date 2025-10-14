@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>ONIC Esports</title>
+    <link rel="stylesheet" href="tesStyle.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/b8/ONIC_Esports_logo.png" alt="Logo ONIC" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('beranda')">Beranda</a></li>
+                <li><a href="#" onclick="showPage('tentang')">Tentang</a></li>
+                <li><a href="#" onclick="showPage('trophy')">Trophy</a></li>
+                <li><a href="#" onclick="showPage('roster')">Roster</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BERANDA -->
+    <section id="beranda" class="section active">
+        <h1>Selamat Datang di ONIC Esports</h1>
+        <p>Tim Esports kebanggaan Indonesia, sang landak kuning yang siap mendominasi arena!</p>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="section">
+        <h2>Tentang ONIC Esports</h2>
+        <p>
+            ONIC Esports adalah organisasi esports profesional asal Indonesia yang berdiri pada tahun 2018.
+            Dikenal dengan julukan <strong>"Landak Kuning"</strong>, ONIC memiliki tim di berbagai divisi seperti Mobile Legends, Free Fire, dan lainnya.
+            Tim Mobile Legends ONIC Esports dikenal dengan permainan disiplin, strategi tinggi, dan konsistensi mereka di turnamen nasional maupun internasional.
+        </p>
+    </section>
+
+    <!-- TROPHY -->
+    <section id="trophy" class="section">
+        <h2>Trophy yang Pernah Diraih</h2>
+        <div class="trophy-container">
+            <div class="trophy-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Trophy_icon.png" alt="Trophy">
+                <p>MPL Indonesia Season 10 - Juara 1</p>
+            </div>
+            <div class="trophy-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Trophy_icon.png" alt="Trophy">
+                <p>MPL Indonesia Season 11 - Juara 1</p>
+            </div>
+            <div class="trophy-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Trophy_icon.png" alt="Trophy">
+                <p>MPL Indonesia Season 12 - Juara 1</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROSTER -->
+    <section id="roster" class="section">
+        <h2>Roster ONIC MLBB</h2>
+        <div class="roster-container">
+            <div class="player">
+                <img src="https://i.imgur.com/hyJYb4x.png" alt="Kairi">
+                <p><strong>Kairi</strong></p>
+                <p>Jungler</p>
+            </div>
+            <div class="player">
+                <img src="https://i.imgur.com/X8FkzZC.png" alt="Skylar">
+                <p><strong>Skylar</strong></p>
+                <p>Gold Laner</p>
+            </div>
+            <div class="player">
+                <img src="https://i.imgur.com/X8FkzZC.png" alt="Savero">
+                <p><strong>Savero</strong></p>
+                <p>Gold Laner</p>
+            </div>
+            <div class="player">
+                <img src="https://i.imgur.com/VFTFvQp.png" alt="Lutpi">
+                <p><strong>Lutpi</strong></p>
+                <p>Exp Laner</p>
+            </div>
+            <div class="player">
+                <img src="https://i.imgur.com/bUFXJzA.png" alt="Sanz">
+                <p><strong>Sanz</strong></p>
+                <p>Mid Laner</p>
+            </div>
+            <div class="player">
+                <img src="https://i.imgur.com/1yKXkzH.png" alt="Kiboy">
+                <p><strong>Kiboy</strong></p>
+                <p>Roamer</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ONIC Esports | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
