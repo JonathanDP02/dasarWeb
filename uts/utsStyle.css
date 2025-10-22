@@ -50,13 +50,14 @@ nav ul li a:hover {
 
 /* SECTION */
 .section {
-    padding: 60px 80px;
-    text-align: center;
     display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .section.active {
     display: block;
+    opacity: 1;
 }
 
 h1, h2 {
@@ -181,4 +182,20 @@ footer {
     padding: 15px;
     font-size: 14px;
     color: #ccc;
+}
+
+.fade-in {
+    animation: fadeIn 3s ease forwards;
+}
+.fade-out {
+    animation: fadeOut 3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
 }

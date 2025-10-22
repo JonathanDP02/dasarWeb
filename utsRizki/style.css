@@ -1,0 +1,116 @@
+/* Umum */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header & Navigasi */
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav  a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+nav a:hover, nav a.active {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('img/gambar20.jpg') center/cover no-repeat;
+    color: black;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #d35400;
+}
+
+/* Produk */
+.produk {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.produk h2 {
+    color: #222;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: white;
+    width: 260px;
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    vertical-align: top;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #e67e22;
+    margin: 10px 0 5px 0;
+}
+
+/* About */
+.about {
+    max-width: 700px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}

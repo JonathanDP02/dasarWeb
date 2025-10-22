@@ -1,3 +1,21 @@
+<?php
+// ==== KONEKSI KE POSTGRES ====
+$host = "localhost";
+$port = "5432";
+$dbname = "onic_esports";
+$user = "postgres";
+$password = "02122005";
+
+$conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
+if (!$conn) {
+    die("Koneksi ke database gagal!");
+}
+
+// ==== AMBIL DATA DARI POSTGRES ====
+$query = "SELECT nama, role, gambar FROM roster_mlbb";
+$result = pg_query($conn, $query);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -163,36 +181,19 @@
     <section id="roster" class="section">
         <h2>Roster ONIC MLBB</h2>
         <div class="roster-container">
-            <div class="player">
-                <img src="kairi.png">
-                <p><strong>Kairi</strong></p>
-                <p>Jungler</p>
-            </div>
-            <div class="player">
-                <img src="skylar.png" alt="Skylar">
-                <p><strong>Skylar</strong></p>
-                <p>Gold Laner</p>
-            </div>
-            <div class="player">
-                <img src="savero.png" alt="Savero">
-                <p><strong>Savero</strong></p>
-                <p>Gold Laner</p>
-            </div>
-            <div class="player">
-                <img src="lutpi.png" alt="Lutpi">
-                <p><strong>Lutpi</strong></p>
-                <p>Exp Laner</p>
-            </div>
-            <div class="player">
-                <img src="sanz.png" alt="Sanz">
-                <p><strong>Sanz</strong></p>
-                <p>Mid Laner</p>
-            </div>
-            <div class="player">
-                <img src="kiboy.png" alt="Kiboy">
-                <p><strong>Kiboy</strong></p>
-                <p>Roamer</p>
-            </div>
+            <?php
+            if (pg_num_rows($result) > 0) {
+                while ($row = pg_fetch_assoc($result)) {
+                    echo '<div class="player">';
+                    echo '<img src="' . htmlspecialchars($row['gambar']) . '" alt="' . htmlspecialchars($row['nama']) . '">';
+                    echo '<p><strong>' . htmlspecialchars($row['nama']) . '</strong></p>';
+                    echo '<p>' . htmlspecialchars($row['role']) . '</p>';
+                    echo '</div>';
+                }
+            } else {
+                echo "<p>Belum ada data roster.</p>";
+            }
+            ?>
         </div>
     </section>
 
@@ -200,12 +201,8 @@
         <p>&copy; 2025 ONIC Esports | All Rights Reserved</p>
     </footer>
 
-    <script>
-        function showPage(pageId) {
-            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
-        }
-    </script>
-
+<script src="utsScript.js"></script>
 </body>
 </html>
+
+<?php pg_close($conn); ?>
