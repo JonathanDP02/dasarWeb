@@ -11,6 +11,7 @@ $result = pg_query($conn, $query);
 <head>
     <title>ONIC Esports</title>
     <link rel="stylesheet" href="utsStyle.css">
+    <script src="utsScript.js"></script>
 </head>
 <body>
 
@@ -195,7 +196,6 @@ $result = pg_query($conn, $query);
         <p>&copy; 2025 ONIC Esports | All Rights Reserved</p>
     </footer>
 
-<script src="utsScript.js"></script>
 </body>
 </html>
 
