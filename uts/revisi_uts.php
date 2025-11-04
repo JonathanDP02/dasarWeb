@@ -1,18 +1,8 @@
 <?php
 // ==== KONEKSI KE POSTGRES ====
-$host = "localhost";
-$port = "5432";
-$dbname = "onic_esports";
-$user = "postgres";
-$password = "02122005";
-
-$conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
-if (!$conn) {
-    die("Koneksi ke database gagal!");
-}
-
+include 'koneksi.php';
 // ==== AMBIL DATA DARI POSTGRES ====
-$query = "SELECT nama, role, gambar FROM roster_mlbb";
+$query = "SELECT nama, role, gambar FROM roster_mlbb ORDER BY id ASC"; // Tambahkan ORDER BY
 $result = pg_query($conn, $query);
 ?>
 
@@ -33,6 +23,7 @@ $result = pg_query($conn, $query);
                 <li><a href="#" onclick="showPage('tentang')">Tentang</a></li>
                 <li><a href="#" onclick="showPage('trophy')">Trophy</a></li>
                 <li><a href="#" onclick="showPage('roster')">Roster</a></li>
+                <li><a href="admin_roster.php" target="_blank" style="color: #ffaa00; font-weight: bold;">Admin Roster</a></li>
             </ul>
         </nav>
     </header>
@@ -184,8 +175,11 @@ $result = pg_query($conn, $query);
             <?php
             if (pg_num_rows($result) > 0) {
                 while ($row = pg_fetch_assoc($result)) {
+                    // Pastikan path gambar benar
+                    $gambar_path = htmlspecialchars($row['gambar']);
+                    
                     echo '<div class="player">';
-                    echo '<img src="' . htmlspecialchars($row['gambar']) . '" alt="' . htmlspecialchars($row['nama']) . '">';
+                    echo '<img src="' . $gambar_path . '" alt="' . htmlspecialchars($row['nama']) . '">';
                     echo '<p><strong>' . htmlspecialchars($row['nama']) . '</strong></p>';
                     echo '<p>' . htmlspecialchars($row['role']) . '</p>';
                     echo '</div>';

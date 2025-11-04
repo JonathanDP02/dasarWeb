@@ -79,7 +79,7 @@ h1, h2 {
     border-radius: 10px;
     padding: 20px;
     width: 80%;
-    text-align: left;
+    text-align: center;
 }
 
 .berita-item h3 {
@@ -198,4 +198,116 @@ footer {
 @keyframes fadeOut {
     from { opacity: 1; transform: translateY(0); }
     to { opacity: 0; transform: translateY(-20px); }
+}
+
+.btn-tambah, .btn-edit, .btn-hapus {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-tambah {
+    background-color: #FFD700;
+    color: #000;
+    margin-bottom: 20px;
+}
+.btn-tambah:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-edit {
+    background-color: #007bff;
+    color: #fff;
+}
+.btn-edit:hover {
+    background-color: #0056b3;
+}
+
+.btn-hapus {
+    background-color: #dc3545;
+    color: #fff;
+}
+.btn-hapus:hover {
+    background-color: #c82333;
+}
+
+/* Style Tabel Admin */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-table th,
+.admin-table td {
+    border: 1px solid #FFD700;
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.admin-table th {
+    background-color: #333;
+    color: #FFD700;
+}
+
+.admin-table td {
+    background-color: #222;
+}
+
+.admin-img-preview {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #FFD700;
+}
+
+.admin-aksi {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style Form Admin */
+.admin-form {
+    max-width: 600px;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #FFD700;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"] {
+    padding: 10px;
+    background-color: #333;
+    border: 1px solid #FFD700;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input[type="file"] {
+    padding: 7px;
 }
