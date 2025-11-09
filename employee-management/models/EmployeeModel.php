@@ -162,5 +162,12 @@ class EmployeeModel {
         return $stmt;
     }
 
+    public function getDepartmentSummaryFunction() {
+        $query = "SELECT * FROM get_department_summary()";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt;
+    }
+
 }
 ?>

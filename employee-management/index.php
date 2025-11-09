@@ -115,6 +115,11 @@ switch ($action) {
         include 'views/salary_range.php';
     break;
 
+    case 'department_summary':
+        $summary = $employeeModel->getDepartmentSummaryFunction();
+        include 'views/department_summary.php';
+    break;
+
     default:
         $dashboard = $employeeModel->getDashboardSummary();
         include 'views/dashboard.php';

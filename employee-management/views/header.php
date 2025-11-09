@@ -23,7 +23,7 @@
             <a href="index.php?action=tenure_stats" class="nav-link">Masa Kerja</a>
             <a href="index.php?action=employee_overview" class="nav-link">Ringkasan Karyawan</a>
             <a href="index.php?action=salary_range" class="nav-link">Cari Gaji</a>
-
+            <a href="index.php?action=department_summary" class="nav-link">Ringkasan Departemen</a>
         </nav>
 
         <main class="main-content">
