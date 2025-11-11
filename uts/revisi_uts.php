@@ -1,5 +1,6 @@
 <?php
 // ==== KONEKSI KE POSTGRES ====
+include 'auth.php';
 include 'koneksi.php';
 // ==== AMBIL DATA DARI POSTGRES ====
 $query = "SELECT nama, role, gambar FROM roster_mlbb ORDER BY id ASC"; // Tambahkan ORDER BY
@@ -25,6 +26,9 @@ $result = pg_query($conn, $query);
                 <li><a href="#" onclick="showPage('trophy')">Trophy</a></li>
                 <li><a href="#" onclick="showPage('roster')">Roster</a></li>
                 <li><a href="admin_roster.php" target="_blank" style="color: #ffaa00; font-weight: bold;">Admin Roster</a></li>
+                <li class="logout-nav">
+                    <a href="logout.php" class="logout-btn" title="Logout">Logout</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -191,6 +195,13 @@ $result = pg_query($conn, $query);
             ?>
         </div>
     </section>
+
+    <div class="text-center mt-4">
+        <a href="logout.php" class="btn btn-danger logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </div>
+
 
     <footer>
         <p>&copy; 2025 ONIC Esports | All Rights Reserved</p>
