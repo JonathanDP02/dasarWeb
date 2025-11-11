@@ -43,16 +43,14 @@ if (isset($_POST['register'])) {
       height: 100vh;
     }
 
-    /* Gambar 3/4 layar */
     .register-image {
-      flex: 3; /* dulu 1, sekarang 3x lebih besar */
-      background: url('bonic.jpg') no-repeat center center/cover;
+      flex: 3;
+      background: url('onicbg.png') no-repeat center center/cover;
       background-size: cover;
     }
 
-    /* Form 1/4 layar */
     .register-form {
-      flex: 1; /* jadi 1/4 dari layar */
+      flex: 1;
       background-color: #0a0a0a;
       color: white;
       display: flex;

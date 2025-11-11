@@ -43,7 +43,6 @@ function hapusGambar($filepath) {
 }
 
 
-// ROUTING LOGIC (CREATE, UPDATE, DELETE)
 
 // CREATE
 if (isset($_POST['action']) && $_POST['action'] == 'create') {

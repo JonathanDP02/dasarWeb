@@ -9,7 +9,6 @@ if (empty($id) || !is_numeric($id)) {
 }
 
 // Ambil data roster berdasarkan ID
-// Kita gunakan pg_query_params untuk keamanan dari SQL Injection
 $query = "SELECT id, nama, role, gambar FROM roster_mlbb WHERE id = $1";
 $result = pg_query_params($conn, $query, array($id));
 $row = pg_fetch_assoc($result);
